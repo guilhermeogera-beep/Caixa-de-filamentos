@@ -1,13 +1,13 @@
 {
-  "name": "Caixa de filamentos",
-  "short_name": "Caixa-de-filamentos",
-  "description": "Controle do secador de filamento",
+  "name": "Caixa de Filamentos",
+  "short_name": "Filamentos",
+  "description": "Controle de temperatura e umidade para secador de filamentos 3D",
   "start_url": "/Caixa-de-filamentos/",
   "scope": "/Caixa-de-filamentos/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#121212",
-  "theme_color": "#1b528f",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
   "icons": [
     {
       "src": "icons/icon-192.png",
