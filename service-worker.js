@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Caixa-de-filamentos';
+const CACHE_NAME = 'Caixa-de-filamentos-v2'; // Mudou para v2
 
 const urlsToCache = [
     './',
@@ -33,10 +33,8 @@ self.addEventListener('activate', event => {
 
 // Intercepta requisições: serve do cache se disponível
 self.addEventListener('fetch', event => {
-    // CORREÇÃO AQUI: Não intercepta requisições para o endereço mDNS .local ou IPs locais
-    if (event.request.url.includes('caixadefilamentos.local') || event.request.url.includes('http://caixadefilamentos.local/')) {
-        return; 
-    }
+    // Não intercepta requisições para o ESP32
+    if (event.request.url.includes('192.168.1.106')) return;
 
     event.respondWith(
         caches.match(event.request).then(response => {
