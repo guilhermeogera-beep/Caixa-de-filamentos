@@ -34,7 +34,7 @@ self.addEventListener('activate', event => {
 // Intercepta requisições: serve do cache se disponível
 self.addEventListener('fetch', event => {
     // CORREÇÃO AQUI: Não intercepta requisições para o endereço mDNS .local ou IPs locais
-    if (event.request.url.includes('caixadefilamentos.local') || event.request.url.includes('192.168.')) {
+    if (event.request.url.includes('caixadefilamentos.local') || event.request.url.includes('http://caixadefilamentos.local/')) {
         return; 
     }
 
